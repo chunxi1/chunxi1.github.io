@@ -61,7 +61,7 @@
   
     
       
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/solarized-light.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/rainbow.css">
 
     
   
@@ -542,7 +542,7 @@ systemctl status httpd</code></pre>
 <p><strong>master节点</strong></p>
 <pre><code class="bash">yum install ntp -y
 vi /etc/ntp.conf</code></pre>
-<p>注释以下四行添加：</p>
+<p>注释以下四行：</p>
 <pre><code class="bash">server 0.centos.pool.ntp.org iburst
 server 1.centos.pool.ntp.org iburst
 server 2.centos.pool.ntp.org iburst
@@ -558,7 +558,7 @@ systemctl enable ntpd</code></pre>
 systemctl enable ntpdate
 ntpdate master.hadoop</code></pre>
 <h3 id="禁用Transparent-Huge-Pages"><a href="#禁用Transparent-Huge-Pages" class="headerlink" title="禁用Transparent Huge Pages:"></a>禁用Transparent Huge Pages:</h3><p><strong>双节点</strong></p>
-<pre><code class="text">[root@master ~]# cat /sys/kernel/mm/transparent_hugepage/enabled
+<pre><code class="shell">[root@master ~]# cat /sys/kernel/mm/transparent_hugepage/enabled
 [always] madvise never
 [root@master ~]# echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled
 [root@master ~]# echo never &gt; /sys/kernel/mm/transparent_hugepage/defrag
@@ -588,29 +588,29 @@ systemctl enable mariadb
 systemctl start mariadb</code></pre>
 <p>配置 MariaDB</p>
 <pre><code class="bash">mysql_secure_installation</code></pre>
-<p>第一个直接 <kbd>&#8629;</kbd> ，设置密码 <code>bigdata</code> 之后 yes、no、yes、yes</p>
-<pre><code class="text">Enter current password for root (enter for none): 
+<p>安全配置向导</p>
+<pre><code class="bash">Enter current password for root (enter for none): 
 
-Set root password? [Y/n] y
-New password: 
-Re-enter new password: 
+Set root password? [Y/n] y                        # 是否设置root用户密码，输入y并回车或直接回车
+New password:                                     # 设置root用户的密码
+Re-enter new password:                            # 再次输入一遍
 Password updated successfully!
 Reloading privilege tables..
  ... Success!
 
-Remove anonymous users? [Y/n] y
+Remove anonymous users? [Y/n] y                   # 是否删除匿名用户,生产环境建议删除
  ... Success!
 
-Disallow root login remotely? [Y/n] n
+Disallow root login remotely? [Y/n] n             # 是否禁止root远程登录
  ... skipping.
 
-Remove test database and access to it? [Y/n] y
+Remove test database and access to it? [Y/n] y    # 是否删除test数据库
  - Dropping test database...
  ... Success!
  - Removing privileges on test database...
  ... Success!
 
-Reload privilege tables now? [Y/n] y
+Reload privilege tables now? [Y/n] y              # 是否重新加载权限表
  ... Success!
 
 Thanks for using MariaDB!</code></pre>
@@ -629,18 +629,18 @@ quit;</code></pre>
 <pre><code class="bash">export buildNumber=2.6.0.0</code></pre>
 <p>安装ambari-server</p>
 <pre><code class="bash">ambari-server setup</code></pre>
-<p>配置选项：</p>
-<pre><code class="text">Customize user account for ambari-server daemon [y/n] (n)? n
+<p>安装向导：</p>
+<pre><code class="bash">Customize user account for ambari-server daemon [y/n] (n)? n                    # 自定义ambari服务器后台程序的用户帐户
 
 [1] Oracle JDK 1.8 + Java Cryptography Extension (JCE) Policy Files 8
 [2] Oracle JDK 1.7 + Java Cryptography Extension (JCE) Policy Files 7
 [3] Custom JDK
 ==============================================================================
-Enter choice (1): 3
+Enter choice (1): 3                                                             # 输入选项
 
-Path to JAVA_HOME: /usr/jdk64/jdk1.8.0_77/
+Path to JAVA_HOME: /usr/jdk64/jdk1.8.0_77/                                      # 输入JAVA安装路径
 
-Enter advanced database configuration [y/n] (n)? y
+Enter advanced database configuration [y/n] (n)? y                              # 输入高级数据库配置
 
 Choose one of the following options:
 [1] - PostgreSQL (Embedded)
@@ -651,15 +651,15 @@ Choose one of the following options:
 [6] - SQL Anywhere
 [7] - BDB
 ==============================================================================
-Enter choice (1): 3
+Enter choice (1): 3                                                             # 选择数据库
 
-Hostname (localhost):                 #回车默认
-Port (3306):                          #回车默认
-Database name (ambari):               #回车默认
-Username (ambari):                    #回车默认
-Enter Database Password (bigdata):    #回车默认
+Hostname (localhost):                                                           # 主机名，回车默认
+Port (3306):                                                                    # 数据库端口，回车默认
+Database name (ambari):                                                         # 数据库名，回车默认
+Username (ambari):                                                              # 用户名，回车默认
+Enter Database Password (bigdata):                                              # 数据库密码，回车默认
 
-Proceed with configuring remote database connection properties [y/n] (y)? y
+Proceed with configuring remote database connection properties [y/n] (y)? y     # 继续配置远程数据库连接属性
 
 Adjusting ambari-server permissions and ownership...
 Ambari Server &#39;setup&#39; completed successfully.</code></pre>
@@ -808,6 +808,14 @@ tail -f /var/log/ambari-agent/ambari-agent.log</code></pre>
 
   
     <div class="prev-next">
+      
+        <a class='prev' href='/2020/09/17/vm_bigdata/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>虚拟机搭建先电大数据平台</p>
+          <p class='content'>按照顺序，如果使用 vmware 搭建 iaas 再在里面的云平台搭建大数据平台，可能会出现内存、处理器资源不足，遂推出直接在虚拟机中安装的方法
+
+
+准备CentOS-7-x86_64-DVD-...</p>
+        </a>
       
       
         <a class='next' href='/2018/12/05/pass/'>
