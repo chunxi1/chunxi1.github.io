@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.4'>
+<html lang="zh-CN">
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0'>
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -620,6 +620,9 @@ vi /etc/yum.repos.d/ambari.repo</code></pre>
 vi /etc/vsftpd/vsftpd.conf</code></pre>
 <p>在首行添加一行：</p>
 <pre><code class="bash">anon_root=/opt/</code></pre>
+<p>开启 vsftpd</p>
+<pre><code class="bash">systemctl start vsftpd
+systemctl enable vsftpd</code></pre>
 <p><strong>双节点</strong></p>
 <pre><code class="bash">yum clean all
 yum list                          # 此镜像的防火墙默认关闭</code></pre>
@@ -874,6 +877,7 @@ VCPU
 
 
 
+        
       </div>
       
   
@@ -1179,6 +1183,7 @@ VCPU
       highlight: 'true',
       mathJax: 'false',
       enableQQ: 'true',
+      recordIP: false,
       requiredFields: requiredFields,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
       emojiMaps: emojiMaps

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.4'>
+<html lang="zh-CN">
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0'>
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -536,7 +536,7 @@ yum list</code></pre>
 INSECURE_REGISTRY=&#39;--insecure-registry 192.168.200.103:5000&#39;</code></pre>
 <p>使配置生效</p>
 <pre><code class="bash">systemctl daemon-reload    # 生效
-systemctl start docker     # 启动
+systemctl restart docker   # 启动
 systemctl enable docker    # 开机自启
 docker info                # 查询地址是否修改正确</code></pre>
 <h3 id="上传仓库地址使用镜像"><a href="#上传仓库地址使用镜像" class="headerlink" title="上传仓库地址使用镜像"></a>上传仓库地址使用镜像</h3><p><strong>server节点</strong></p>
@@ -869,6 +869,7 @@ VCPU
 
 
 
+        
       </div>
       
   
@@ -1174,6 +1175,7 @@ VCPU
       highlight: 'true',
       mathJax: 'false',
       enableQQ: 'true',
+      recordIP: false,
       requiredFields: requiredFields,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
       emojiMaps: emojiMaps
