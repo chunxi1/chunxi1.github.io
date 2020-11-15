@@ -30,8 +30,6 @@
 
   <!-- feed -->
   
-    <link rel="alternate" href="/atom.xml" title="Chunxi's Blog" type="application/atom+xml">
-  
 
   <!-- import meta -->
   
@@ -379,7 +377,7 @@
             
 <div class='new-meta-item author'>
   <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/chunxi1-head.png">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/chunxi1/links@v1.0/imgs/chunxi1-head.png">
     <p>chunxi1</p>
   </a>
 </div>
@@ -509,7 +507,7 @@ Changes will remain in memory only, until you decide to write them.
 Be careful before using the write command.
 
 
-Command (m for help): 
+Command (m for help):
 Command (m for help): p                                                     # 打印存在的分区
 
 Disk /dev/sda: 107.4 GB, 107374182400 bytes, 209715200 sectors
@@ -629,7 +627,7 @@ systemctl enable ntpd</code></pre>
 <pre><code class="bash">yum install ntpdate -y
 systemctl enable ntpdate
 ntpdate master.hadoop</code></pre>
-<h3 id="禁用Transparent-Huge-Pages"><a href="#禁用Transparent-Huge-Pages" class="headerlink" title="禁用Transparent Huge Pages:"></a>禁用Transparent Huge Pages:</h3><p><strong>双节点</strong></p>
+<h3 id="禁用Transparent-Huge-Pages"><a href="#禁用Transparent-Huge-Pages" class="headerlink" title="禁用Transparent Huge Pages"></a>禁用Transparent Huge Pages</h3><p><strong>双节点</strong></p>
 <pre><code class="shell">[root@master ~]# cat /sys/kernel/mm/transparent_hugepage/enabled
 [always] madvise never
 [root@master ~]# echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled
@@ -775,7 +773,7 @@ java -version</code></pre>
       
       
         <a class='next' href='/2019/01/11/bigdata/'>
-          <p class='title'>先电大数据平台搭建<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='title'>大数据搭建<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>云主机创建在平台 管理员 - 系统 - 云主机类型 创建云主机类型：
 
 
@@ -844,7 +842,7 @@ VCPU
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-text">准备</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%9B%E5%BB%BA"><span class="toc-text">虚拟机创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%89%E7%9B%98%E9%95%9C%E5%83%8F"><span class="toc-text">添加光盘镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E7%A3%81%E7%9B%98"><span class="toc-text">扩展磁盘</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE"><span class="toc-text">虚拟机配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="toc-text">配置主机名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E5%88%86%E5%8C%BA"><span class="toc-text">扩展分区</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-hosts"><span class="toc-text">配置 hosts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-yum-%E6%BA%90%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6"><span class="toc-text">修改 yum 源安装软件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-vsftpd"><span class="toc-text">安装 vsftpd</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6"><span class="toc-text">安装软件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%81%E7%94%A8Transparent-Huge-Pages"><span class="toc-text">禁用Transparent Huge Pages:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Java-JDK"><span class="toc-text">安装Java JDK</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-text">准备</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%9B%E5%BB%BA"><span class="toc-text">虚拟机创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%89%E7%9B%98%E9%95%9C%E5%83%8F"><span class="toc-text">添加光盘镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E7%A3%81%E7%9B%98"><span class="toc-text">扩展磁盘</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE"><span class="toc-text">虚拟机配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="toc-text">配置主机名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E5%88%86%E5%8C%BA"><span class="toc-text">扩展分区</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-hosts"><span class="toc-text">配置 hosts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-yum-%E6%BA%90%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6"><span class="toc-text">修改 yum 源安装软件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-vsftpd"><span class="toc-text">安装 vsftpd</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6"><span class="toc-text">安装软件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%81%E7%94%A8Transparent-Huge-Pages"><span class="toc-text">禁用Transparent Huge Pages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Java-JDK"><span class="toc-text">安装Java JDK</span></a></li></ol>
     </div>
   </section>
 
