@@ -521,7 +521,8 @@ export PATH=$JAVA_HOME/bin:$PATH</code></pre>
 <pre><code>source /etc/profile
 java -version</code></pre>
 <h3 id="安装-MariaDB-数据库"><a href="#安装-MariaDB-数据库" class="headerlink" title="安装 MariaDB 数据库"></a>安装 MariaDB 数据库</h3><p><strong>master节点</strong></p>
-<pre><code>yum install mariadb mariadb-server mysql-connector-java -y
+<pre><code>yum install ambari-server -y
+yum install mariadb mariadb-server mysql-connector-java -y
 systemctl enable mariadb
 systemctl start mariadb</code></pre>
 <p>安全配置向导</p>
@@ -563,9 +564,8 @@ quit;</code></pre>
 <pre><code>vi /etc/profile
 
 export buildNumber=2.6.0.0</code></pre>
-<p>安装ambari-server</p>
-<pre><code>yum install ambari-server -y
-ambari-server setup</code></pre>
+<p>启动 ambari-server 安装向导</p>
+<pre><code>ambari-server setup</code></pre>
 <p>安装向导：</p>
 <pre><code>Customize user account for ambari-server daemon [y/n] (n)? n                    # 自定义ambari服务器后台程序的用户帐户
 
