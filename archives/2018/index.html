@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.1.2'>
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -18,10 +18,13 @@
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
 
   <!-- 页面元数据 -->
   
-  <title>归档：2018 - Chunxi&#39;s Blog</title>
+  <title>归档：2018 - Chunxi&#39;s blog</title>
   
 
   
@@ -34,22 +37,7 @@
 
   <!-- link -->
   
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
-
-  
-  
-
-  
-
-  
     <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/heart.ico">
-  
-
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
-  
-
   
 
   <!-- import link -->
@@ -57,23 +45,66 @@
 
   
     
-      
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/rainbow.css">
+<link rel="stylesheet" href="/css/first.css">
 
-    
   
-  
-    
-<link rel="stylesheet" href="/css/style.css">
 
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   
 
   <script id="loadcss"></script>
 
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
 </head>
 
-<body>
-  
+  <body>
+    
 
 <header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
   <div class='container'>
@@ -92,7 +123,7 @@
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/chunxi1/links@1.0/imgs/nUbidyPT16tJVFI.png'/>
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/logo.png'/>
           
           
           
@@ -162,22 +193,6 @@
                     id="archives"
                   >
                   <i class='fas fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/atom.xml
-                  
-                  
-                  
-                    id="atomxml"
-                  >
-                  <i class='fas fa-rss fa-fw'></i>RSS
                 </a>
                 
               </li>
@@ -279,22 +294,6 @@
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/atom.xml
-                  
-                  
-                  
-                    id="atomxml"
-                  >
-                  <i class='fas fa-rss fa-fw'></i>RSS
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
                 <a class="menuitem flat-box header toggle-mode-btn">
                   <i class='fas fa-moon fa-fw'></i>暗黑模式
                 </a>
@@ -310,11 +309,11 @@
   </div>
 </header>
 
-  <div id="l_body">
-    <div id="l_cover">
+    <div id="l_body">
+      <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  focus' style="display: ;">
+        <div id="half" class='cover-wrapper  dock' style="display: ;">
           
             <div id='cover-backstretch'></div>
           
@@ -324,8 +323,6 @@
     
       <p class="title">Chunxi1</p>
     
-    
-      <p class="subtitle">阿巴阿巴阿巴</p>
     
   </div>
   <div class='bottom'>
@@ -352,9 +349,9 @@
   
   </div>
 
-    <div id='safearea'>
-      <div class='body-wrapper' id="pjax-container">
-        
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
 
 <div class='l_main'>
 	
@@ -382,14 +379,39 @@
   
     
     <h2 class="article-title" >
-      <a href="/2018/12/05/paas/">
+      <a href="/2018/12/05/Paas%E6%90%AD%E5%BB%BA/">
         Paas搭建
       </a>
     </h2>
   
   <div class='md'>
     
-      <h3 id="云主机创建"><a href="#云主机创建" class="headerlink" title="云主机创建"></a>云主机创建</h3><p>在 <code>项目</code> - <code>计算</code> - <code>云主机</code> 创建云主机：</p>
+      
+        云主机创建在 项目 - 计算 - 云主机 创建云主机：
+
+
+
+Instance Name
+源
+flavor
+网络
+
+
+
+server
+ContOS_7.2
+m1.medium
+int
+
+
+client
+ContOS_7.2
+m1.medium
+int
+
+
+为两台云主机分别绑定浮动IP (本文以 client:192.168.200.102, server:192.168.200.103 为示...
+      
     
   </div>
   
@@ -404,7 +426,7 @@
       </div>
       
         <div>
-          <a class='readmore' href='/2018/12/05/paas/'>
+          <a class='readmore' href='/2018/12/05/Paas%E6%90%AD%E5%BB%BA/'>
             阅读全文
           </a>
         </div>
@@ -426,14 +448,14 @@
   
     
     <h2 class="article-title" >
-      <a href="/2018/10/01/iaas/">
+      <a href="/2018/10/01/Iaas%E6%90%AD%E5%BB%BA/">
         Iaas搭建
       </a>
     </h2>
   
   <div class='md'>
     
-      <p>文中的 <code>10节点</code> 表示 <code>controller节点</code>，<code>20节点</code> 表示 <code>compute节点</code>；网卡名默认 <code>eth0</code> 和 <code>enp7s0</code> 表示内网， <code>eth1</code> 和 <code>enp8s0</code> 为外网 (相对服务器的内外网)。</p>
+      <p>文中的 10节点 表示 controller 节点，20节点 表示 compute 节点；网卡名默认 eth0 和 enp7s0 表示内网， eth1 和 enp8s0 为外网(相对服务器的内外网)。</p>
     
   </div>
   
@@ -448,7 +470,7 @@
       </div>
       
         <div>
-          <a class='readmore' href='/2018/10/01/iaas/'>
+          <a class='readmore' href='/2018/10/01/Iaas%E6%90%AD%E5%BB%BA/'>
             阅读全文
           </a>
         </div>
@@ -529,8 +551,6 @@
     
       <div class='text'>
         
-          <h2>Chunxi</h2>
-        
         
           <p>云想衣裳花想容，春风拂栏露华浓</p>
 
@@ -542,15 +562,6 @@
       <div class="social-wrapper">
         
           
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
             <a href="mailto:chunxi1@qq.com"
               class="social fas fa-envelope flat-btn"
               target="_blank"
@@ -560,7 +571,7 @@
           
         
           
-            <a href="https://github.com/chunxi1"
+            <a href="https://github.com/chunxi1/"
               class="social fab fa-github flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -604,7 +615,7 @@
           <li><a class="flat-box"
             title="/categories/%E5%85%88%E7%94%B5/" href="/categories/%E5%85%88%E7%94%B5/"
             id="categoriesE58588E794B5"
-            ><div class='name'>先电</div><div class='badge'>(4)</div></a></li>
+            ><div class='name'>先电</div><div class='badge'>(3)</div></a></li>
         
       </ul>
     </div>
@@ -628,7 +639,7 @@
 
 
     <div class='content'>
-      <a href="/tags/ambari/" style="font-size: 14px; color: #999">ambari</a> <a href="/tags/bigdata/" style="font-size: 19px; color: #777">bigdata</a> <a href="/tags/iaas/" style="font-size: 14px; color: #999">iaas</a> <a href="/tags/paas/" style="font-size: 14px; color: #999">paas</a> <a href="/tags/vmware/" style="font-size: 14px; color: #999">vmware</a> <a href="/tags/%E5%85%88%E7%94%B5/" style="font-size: 24px; color: #555">先电</a>
+      <a href="/tags/VMware/" style="font-size: 14px; color: #999">VMware</a> <a href="/tags/ambari/" style="font-size: 14px; color: #999">ambari</a> <a href="/tags/bigdata/" style="font-size: 24px; color: #555">bigdata</a> <a href="/tags/iaas/" style="font-size: 14px; color: #999">iaas</a> <a href="/tags/paas/" style="font-size: 14px; color: #999">paas</a> <a href="/tags/%E5%85%88%E7%94%B5/" style="font-size: 24px; color: #555">先电</a>
     </div>
   </section>
 
@@ -641,9 +652,8 @@
 </aside>
 
 
-        
-        
-          <!--此文件用来存放一些不方便取值的变量-->
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <script>
@@ -652,16 +662,23 @@
   pdata.postTitle="";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
-
+  // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
   l_header.classList.remove("show");
   
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="half";
+    cover_wrapper.style.display="";
+    
+  
 </script>
 
+        </div>
         
-      </div>
-      
   
   <footer class="footer clearfix">
     <br><br>
@@ -681,7 +698,7 @@
       list-max-height='320px'
       server='netease'
       type='playlist'
-      id='2106425100'
+      id='2680588407'
       list-folded='true'>
     </meting-js>
   
@@ -704,11 +721,6 @@
       
     
       
-        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
-</div>
-      
-    
-      
         
           <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
@@ -716,29 +728,68 @@
       
     
       
-        <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 Chunxi</a></p>
-
-        </div>
+        
+          <div><p><span><img src="https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/Hearts.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/Hearts.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" style="width: 26px;"><span></p>
+</div>
+        
       
     
   </footer>
 
 
-      <a id="s-top" class="fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
     </div>
-  </div>
-  <div>
-    <script>
+    <div>
+      <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
 window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
 /********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
 function loadScript(src, cb) {
-var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-var script = document.createElement('script');
-script.setAttribute('type','text/javascript');
-if (cb) script.onload = cb;
-script.setAttribute('src', src);
-HEAD.appendChild(script);
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
 }
 //https://github.com/filamentgroup/loadCSS
 var loadCSS = function( href, before, media, attributes ){
@@ -800,6 +851,18 @@ var loadCSS = function( href, before, media, attributes ){
 	return ss;
 };
 </script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/highlight.js@10.6.0/styles/rainbow.css", window.volantis.loadcss);
+  
+</script>
 <!-- required -->
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
@@ -846,13 +909,24 @@ var loadCSS = function( href, before, media, attributes ){
   function SCload_fancybox() {
     if ($(".md .gallery").find("img").length == 0) return;
     loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
-    setTimeout(function() {
-      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
-    }, 1);
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
   };
   $(function () {
     SCload_fancybox();
   });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
 </script>
 
 
@@ -865,7 +939,7 @@ var loadCSS = function( href, before, media, attributes ){
 <script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
 
     <script type="text/javascript">
-        var imgs=["https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/001.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/002.png", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/003.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/004.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/005.png", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/006.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/007.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/008.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/009.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/010.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/011.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/012.jpg"];
+        var imgs=["https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/001.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/002.png", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/003.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/004.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/005.png", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/006.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/007.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/008.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/009.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/010.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/011.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/012.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/013.jpg", "https://cdn.jsdelivr.net/gh/chunxi1/links/imgs/wallpaper/014.jpg"];
         if ('true' == 'true') {
           function shuffle(arr){
             /*From countercurrent-time*/
@@ -884,7 +958,7 @@ var loadCSS = function( href, before, media, attributes ){
           $('#cover-backstretch').backstretch(
             imgs,
           {
-            duration: "20000",
+            duration: "35000",
             fade: "1500"
           });
         
@@ -896,6 +970,22 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+	
+	  loadScript('/js/issues.js');
+	
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
 
 
 
@@ -929,41 +1019,124 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-  
-    <script>
-      window.FPConfig = {
-        delay: 0,
-        ignoreKeywords: [],
-        maxRPS: 5,
-        hoverDelay: 25
-      };
-    </script>
-    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
-  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: [],
+	maxRPS: 5,
+	hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
 
 
 
 
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+	volantis.pjax.push(pjax_initCopyCode)
+</script>
+
+
+
+
+   <script type="text/javascript">
+  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+  var checkScrollReveal = setInterval(function () {
+    if ($("#safearea").css("display")!="block") return
+    if (typeof ScrollReveal=="undefined") return
+    clearInterval(checkScrollReveal)
+	pjax_scrollrebeal();
+  }, 100)
+  });
+  volantis.pjax.push(pjax_scrollrebeal)
+</script>
 
 
 
 
   <script>
   let APlayerController = new Object();
-  APlayerController.id = '2106425100';  // 设定全局音乐播放ID
+  APlayerController.id = '2680588407';  // 设定全局音乐播放ID
   APlayerController.volume = '0.7';
+  loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
+  // APlayer 需要在  MetingJS 之前加载
+  loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  window.volantis.APlayerLoaded=0 // APlayer加载完成状态
+  var checkAPlayer = setInterval(function () {
+    if (!window.APlayer) return // APlayer加载完成？
+	  if ($("#safearea").css("display")!="block") return // 文章内容加载完成？ see: source/css/first.styl
+    clearInterval(checkAPlayer)
+	  if (!window.volantis.APlayerLoaded&&!window.MetingJSElement){ // APlayer只能加载一次
+      window.volantis.APlayerLoaded=1 // APlayer加载完成
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js") // 加载 MetingJS
+	  }
+  }, 2500) // 按照网速调节差分2.5s
+  // rightmenu see: layout/_partial/rightmenu.ejs
+
 </script>
-
-  
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
-
-
-  
-<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
-
-
-
-
 
 
 
@@ -974,19 +1147,9 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 <script>
-  var GUEST_INFO = ['nick', 'mail', 'link'];
-  var meta = 'nick,mail,link'.split(',').filter(function (item) {
-    return GUEST_INFO.indexOf(item) > -1
-  });
-  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
-  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
-    return REQUIRED_FIELDS.indexOf(item) > -1
-  });
-
   function emoji(path, idx, ext) {
     return path + "/" + path + "-" + idx + "." + ext;
   }
-
   var emojiMaps = {};
   for (var i = 1; i <= 54; i++) {
     emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
@@ -1003,44 +1166,29 @@ var loadCSS = function( href, before, media, attributes ){
   for (var i = 1; i <= 4; i++) {
     emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
   }
-
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-
     let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
-
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-
     var valine = new Valine();
-    valine.init({
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
       el: '#valine_container',
-      meta: meta,
-      placeholder: pagePlaceholder,
       path: path,
-      appId: "gmpY146hqvIvV9MyMRHVVnpU-gzGzoHsz",
-      appKey: "5lUXSTIf4OHwtnyL7thIVkf4",
-      pageSize: '10',
-      avatar: 'robohash',
-      lang: 'zh-cn',
-      visitor: 'true',
-      highlight: 'true',
-      mathJax: 'false',
-      enableQQ: 'true',
-      recordIP: 'false',
-      requiredFields: requiredFields,
+      placeholder: pagePlaceholder,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
-      emojiMaps: emojiMaps
-    })
+      emojiMaps: emojiMaps,
+    }))
   }
-
   $(function () {
     pjax_valine();
   });
+  volantis.pjax.push(pjax_valine);
 </script>
+
 
 
 
@@ -1051,43 +1199,67 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-
-  
-    
-<script src="/js/search.js"></script>
-
-  
-
-
 <!-- optional -->
 
   <script>
 const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
 const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
-(function ($) {
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('/js/search/hexo.js',setSearchService);
+	
+})
+
+function listenSearch(){
   
     customSearch = new HexoSearch({
       imagePath: SearchServiceimagePath
     });
   
-})(jQuery);
-
+}
+function setSearchService() {
+	listenSearch();
+	
+}
 </script>
 
 
 
 
 
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+<script type="text/javascript">
+$(function () {
+  Waves.attach('.flat-btn', ['waves-button']);
+  Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+  Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+  Waves.attach('.flat-box', ['waves-block']);
+  Waves.attach('.float-box', ['waves-block', 'waves-float']);
+  Waves.attach('.waves-image');
+  Waves.init();
+});
+</script>
+
 
 
 
 
   
-    
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
 
-    <script>hljs.initHighlightingOnLoad();</script>
-  
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.6.0/build/highlight.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+volantis.pjax.push(()=>{
+	document.querySelectorAll('pre code').forEach((block) => {
+	  hljs.highlightBlock(block);
+	});
+},"highlightjs")
+</script>
 
 
 
@@ -1184,7 +1356,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       // 请求 PV 并自增
       var pvCtn = document.querySelector('#lc-sv');
       if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'https://clouddd.cc' + '/#lc-sv', 'Visits').then((record) => {
+        var pvGetter = this.getRecord(Counter, 'https://chunxina.com' + '/#lc-sv', 'Visits').then((record) => {
           incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-sv #number');
           if (eles.length > 0) {
@@ -1202,7 +1374,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       // 请求 UV 并自增
       var uvCtn = document.querySelector('#lc-uv');
       if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'https://clouddd.cc' + '/#lc-uv', 'Visitors').then((record) => {
+        var uvGetter = this.getRecord(Counter, 'https://chunxina.com' + '/#lc-uv', 'Visitors').then((record) => {
           var vuv = this.validUV();
           vuv && incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-uv #number');
@@ -1224,7 +1396,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
         for (i = 0; i < allPV.length; i++) {
           let pv = allPV[i];
           let title = pv.getAttribute('data-title');
-          var url = 'https://clouddd.cc' + pv.getAttribute('data-path');
+          var url = 'https://chunxina.com' + pv.getAttribute('data-path');
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增
@@ -1308,28 +1480,15 @@ const darkModeStorageKey = "user-color-scheme";
 const rootElementDarkModeAttributeName = "data-user-color-scheme";
 
 const setLS = (k, v) => {
-  try {
     localStorage.setItem(k, v);
-  } catch (e) {
-    console.log(e.message);
-  }
 };
 
 const removeLS = (k) => {
-  try {
     localStorage.removeItem(k);
-  } catch (e) {
-    console.log(e.message);
-  }
 };
 
 const getLS = (k) => {
-  try {
     return localStorage.getItem(k);
-  } catch (e) {
-    console.log(e.message);
-    return null;
-  }
 };
 
 const getModeFromCSSMediaQuery = () => {
@@ -1385,8 +1544,8 @@ const toggleCustomDarkMode = () => {
 /**
  * bind click event for toggle button
  */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
 function bindToggleButton() {
-	var btn=$("#wrapper .toggle-mode-btn");
     btn.on('click',(e) => {
       const mode = toggleCustomDarkMode();
       applyCustomDarkModeSettings(mode);
@@ -1395,16 +1554,13 @@ function bindToggleButton() {
 
 applyCustomDarkModeSettings();
 document.addEventListener("DOMContentLoaded", bindToggleButton);
-document.addEventListener("pjax:success", bindToggleButton);
-var now = new Date();
-var hour = now.getHours();
-if (hour < 7 && hour >= 19) {
-	var mode = toggleCustomDarkMode();
-	if (mode === "dark") {
-	  applyCustomDarkModeSettings(mode);
-	}
-}
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
 </script>
+
+
 
 
 
@@ -1494,31 +1650,13 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 
 <!-- more -->
 
-
-
-
-    
-      
+ 
+	   
+	    
 
 
 <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
 
-<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
-
-<div class="pjax-animate">
-  
-    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
-    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
-    <script>
-      window.ShowLoading = function() {
-        NProgress.start();
-      };
-      window.HideLoading = function() {
-        NProgress.done();
-      }
-    </script>
-  
-</div>
 
 <script>
     var pjax;
@@ -1527,7 +1665,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
         elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
         selectors: [
           "title",
-          "#l_cover",
+          
           "#pjax-container",
           "#pjax-header-nav-list"
         ],
@@ -1553,9 +1691,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
       } catch (error) {}
 
       window.subData = null; // 移除标题（用于一二级导航栏切换处）
-      if (typeof $.fancybox != "undefined") {
-        $.fancybox.close();    // 关闭弹窗
-      }
+
       volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
       volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
       volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
@@ -1568,61 +1704,32 @@ document.addEventListener("pjax:success", listennSidebarTOC);
       $(document).unbind('scroll');
       $(document).unbind('click');
       $('body').unbind('click');
-      window.ShowLoading();
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
     });
 
     document.addEventListener('pjax:complete', function () {
-      // 关于百度统计对 SPA 页面的处理：
-      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
-      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
-      // 
-
-      // 关于谷歌统计对 SPA 页面的处理：
-      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
-      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
-      
-
       $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
       $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
       $('script[data-pjax], .pjax-reload script').each(function () {
         $(this).parent().append($(this).remove());
       });
       try{
-          if (typeof $.fancybox == "undefined") {
-            SCload_fancybox();
-          } else {
-            pjax_fancybox();
-          }
-        
-		  Pjax_backstretch()
-        
-        
-        document.querySelectorAll('pre code').forEach((block) => {
-          hljs.highlightBlock(block);
-        });
-        
-        
-        
-        
-        
-          pjax_valine();
-        
-        
-        
-        
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
       } catch (e) {
         console.log(e);
       }
-      window.HideLoading();
     });
 
     document.addEventListener('pjax:error', function (e) {
-      window.HideLoading();
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
       window.location.href = e.triggerElement.href;
     });
 </script>
-
-    
-  </div>
-</body>
+ 
+	  
+    </div>
+  </body>
 </html>
